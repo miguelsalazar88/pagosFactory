@@ -6,10 +6,9 @@ public class PagoPse extends Pago{
     private String usuario;
     private String contrasenia;
 
-    public PagoPse(Double valor, int documento, int cuentaOrigen, int cuentaDestino, int codigoBanco, String usuario,
+    public PagoPse(Double valor, int documento, int cuentaDestino, String usuario,
                    String contrasenia) {
-        super(valor, documento, cuentaOrigen, cuentaDestino);
-        this.codigoBanco = codigoBanco;
+        super(valor, documento, cuentaDestino);
         this.usuario = usuario;
         this.contrasenia = contrasenia;
     }

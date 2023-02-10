@@ -1,5 +1,5 @@
 package modelo;
 
 public interface IPagoFactory {
-    Pago crearPago();
+    public Pago crearPago();
 }

@@ -9,9 +9,9 @@ public class PagoTarjetaCredito extends Pago {
     private int cvv;
 
 
-    public PagoTarjetaCredito(Double valor, int documento, int cuentaOrigen, int cuentaDestino, int numeroTarjeta,
+    public PagoTarjetaCredito(Double valor, int documento, int cuentaDestino, int numeroTarjeta,
                               Date fechaVencimiento, int cvv) {
-        super(valor, documento, cuentaOrigen, cuentaDestino);
+        super(valor, documento, cuentaDestino);
         this.numeroTarjeta = numeroTarjeta;
         this.fechaVencimiento = fechaVencimiento;
         this.cvv = cvv;
