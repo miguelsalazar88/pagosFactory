@@ -1,5 +1,5 @@
 package modelo;
-
+import java.util.Date;
 import java.util.Scanner;
 
 public class CreadorPagos implements IPagoFactory {
@@ -41,7 +41,23 @@ public class CreadorPagos implements IPagoFactory {
             pago = new PagoPse(valor,documento,cuentaDestino,usuario, contrasenia);
         }
         else if (tipo == 3) {
-            pago = new PagoTarjetaCredito();
+            int numeroTarjeta;
+            int diaV;
+            int mesV;
+            int anioV;
+            int cvv;
+            System.out.println("Digite su numero de tarjeta: ");
+            numeroTarjeta = sc.nextInt();
+            System.out.println("Digite el dia de vencimiento: ");
+            diaV = sc.nextInt();
+            System.out.println("Digite el mes de vencimiento: ");
+            mesV = sc.nextInt();
+            System.out.println("Digite el año de vencimiento: ");
+            anioV = sc.nextInt();
+            System.out.println("Digite el cvv de la tarjeta: ");
+            cvv = sc.nextInt();
+            Date fechaVencimiento = new Date(anioV, mesV, diaV);
+            pago = new PagoTarjetaCredito(valor, documento, cuentaDestino, numeroTarjeta, fechaVencimiento, cvv);
         }
         else{
             pago = null;

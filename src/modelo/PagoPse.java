@@ -1,8 +1,6 @@
 package modelo;
 
 public class PagoPse extends Pago{
-
-    private int codigoBanco;
     private String usuario;
     private String contrasenia;
 
