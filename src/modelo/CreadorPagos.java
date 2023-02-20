@@ -64,4 +64,11 @@ public class CreadorPagos implements IPagoFactory {
         }
         return pago;
     }
+
+
+    private Pago darPago(int tipo){
+        Pago[] p={new PagoPse(null)};
+
+        return p[tipo];
+    }
 }
